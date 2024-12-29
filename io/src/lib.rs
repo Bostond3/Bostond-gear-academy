@@ -1,6 +1,6 @@
- #![no_std]
-use gstd::prelude::*;
+#![no_std]
 use gmeta::{In, InOut, Metadata, Out};
+use gstd::prelude::*;
 
 pub struct PebblesMetadata;
 
@@ -44,7 +44,7 @@ pub enum PebblesEvent {
     Won(Player),
 }
 
-#[derive(Debug, Default, Clone, Encode, Decode, TypeInfo,PartialEq, Eq)]
+#[derive(Debug, Default, Clone, Encode, Decode, TypeInfo, PartialEq, Eq)]
 pub enum Player {
     #[default]
     User,
@@ -60,5 +60,3 @@ pub struct GameState {
     pub first_player: Player,
     pub winner: Option<Player>,
 }
-
-
